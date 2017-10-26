@@ -17,4 +17,9 @@ RSpec.describe Prct06 do
   it "Existe un m´etodo para obtener la cantidad de prote´ınas de un alimento" do
     expect(10).to eq(Alimentos.new("nombre", 10, 1, 1).proteinas)
   end
+
+  it "Existe un m´etodo para obtener la cantidad de gl´ucidos de un alimento" do
+    expect(10).to eq(Alimentos.new("nombre", 1, 10, 1).glucidos)
+  end
+
 end
