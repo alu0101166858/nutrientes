@@ -11,4 +11,7 @@ class Alimentos
   def proteinas
     @proteinas
   end
+  def glucidos
+    @glucidos
+  end
 end
