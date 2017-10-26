@@ -30,4 +30,6 @@ RSpec.describe Prct06 do
     expect("(Alimento: Huevo frito, proteinas: 14.1, glucidos: 0.0, lipidos: 19.5)").to eq(Alimentos.new("Huevo frito", 14.1, 0.0, 19.5).format)
   end
 
+  it "Existe un m´etodo para obtener el valor energ´etico de un alimento" do
+    expect(134.4).to eq(Alimentos.new("Huevo frito", 14.1, 0.0, 19.5).energy)
 end
