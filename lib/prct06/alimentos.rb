@@ -14,4 +14,7 @@ class Alimentos
   def glucidos
     @glucidos
   end
+  def lipidos
+    @lipidos
+  end
 end
