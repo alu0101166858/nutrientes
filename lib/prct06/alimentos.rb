@@ -8,4 +8,7 @@ class Alimentos
   def name
     @nombre
   end
+  def proteinas
+    @proteinas
+  end
 end
