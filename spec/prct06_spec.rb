@@ -9,4 +9,7 @@ RSpec.describe Prct06 do
   it "does something useful" do
     expect(true).to eq(true)
   end
+  it "can be initialized" do
+    expect(nombre).to eq(Alimento.new(nombre, 1, 1, 1).name)
+  end
 end
