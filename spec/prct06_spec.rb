@@ -10,6 +10,6 @@ RSpec.describe Prct06 do
     expect(true).to eq(true)
   end
   it "can be initialized" do
-    expect(nombre).to eq(Alimento.new(nombre, 1, 1, 1).name)
+    expect("nombre").to eq(Alimentos.new("nombre", 1, 1, 1).name)
   end
 end
