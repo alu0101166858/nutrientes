@@ -9,7 +9,12 @@ RSpec.describe Prct06 do
   it "does something useful" do
     expect(true).to eq(true)
   end
-  it "can be initialized" do
+
+  it "can be initialized and has a name" do
     expect("nombre").to eq(Alimentos.new("nombre", 1, 1, 1).name)
+  end
+
+  it "Existe un m´etodo para obtener la cantidad de prote´ınas de un alimento" do
+    expect(10).to eq(Alimentos.new("nombre", 10, 1, 1).proteinas)
   end
 end
