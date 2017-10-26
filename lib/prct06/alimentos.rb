@@ -20,4 +20,7 @@ class Alimentos
   def format
     "(Alimento: #{@nombre}, proteinas: #{@proteinas}, glucidos: #{@glucidos}, lipidos: #{@lipidos})"
   end
+  def energy
+    @proteinas * 4 + @glucidos * 4 + @lipidos *9
+  end
 end
