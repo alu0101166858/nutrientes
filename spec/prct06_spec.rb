@@ -22,4 +22,9 @@ RSpec.describe Prct06 do
     expect(10).to eq(Alimentos.new("nombre", 1, 10, 1).glucidos)
   end
 
+  it "Existe un m´etodo para obtener de grasas de un alimento" do
+    expect(10).to eq(Alimentos.new("nombre", 1, 1, 10).glucidos)
+  end
+
+
 end
