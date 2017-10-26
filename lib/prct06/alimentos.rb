@@ -17,4 +17,7 @@ class Alimentos
   def lipidos
     @lipidos
   end
+  def format
+    "(Alimento: #{@nombre}, proteinas: #{@proteinas}, glucidos: #{@glucidos}, lipidos: #{@lipidos})"
+  end
 end
