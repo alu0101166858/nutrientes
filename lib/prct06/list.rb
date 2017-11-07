@@ -26,4 +26,11 @@ class List
     @tail = node
     return self
   end
+
+  def shift
+    toReturn = @head
+    @head = @head.next
+    @head.prev = nil
+    return toReturn
+  end
 end
