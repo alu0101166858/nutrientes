@@ -1,5 +1,6 @@
 require "spec_helper"
 require "/home/usuario/LPP/prct06/lib/prct06/alimentos.rb"
+require "/home/usuario/LPP/prct06/lib/prct06/list.rb"
 
 RSpec.describe Prct06 do
   it "has a version number" do
