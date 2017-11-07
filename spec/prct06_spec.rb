@@ -66,5 +66,8 @@ RSpec.describe Prct06 do
     it "Get and delete the first element" do
       expect(list2.shift.value).to eq(a.value)
     end
+    it "Get and delete the last element" do
+      expect(list2.pop.value).to eq(c.value)
+    end
   end
 end
