@@ -13,4 +13,17 @@ class List
   def tail
     @tail
   end
+
+  def add(value)
+    node = Node.new(value, nil, nil)
+    if @head == nil
+      @head = node
+    end
+    if @tail != nil
+      @tail.next = node
+      node.prev = @tail
+    end
+    @tail = node
+    return self
+  end
 end

@@ -55,6 +55,5 @@ RSpec.describe Prct06 do
     it "You can add a value to the list" do
       expect(list1.add(1).head).to eq(a)
     end
-
   end
 end
