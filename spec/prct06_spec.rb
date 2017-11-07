@@ -63,5 +63,8 @@ RSpec.describe Prct06 do
     it "You can add multiple elements into the list" do
       expect(list2.add(3).tail).to eq(c)
     end
+    it "Get and delete the first element" do
+      expect(list2.shift).to eq(a)
+    end
   end
 end
