@@ -35,7 +35,12 @@ RSpec.describe Prct06 do
     a = Node.new(1, nil, nil)
     c = Node.new(3, nil, nil)
     b = Node.new(2, c, a)
+    a.next = b
+    c.prev = b
     list1 = List.new()
+    list2 = List.new()
+    list2.add(1)
+    list2.add(2)
 
     it "It's possible to generate a Node with a value" do
       expect(a.value).to eq(1)
@@ -53,7 +58,10 @@ RSpec.describe Prct06 do
       expect(List.new().tail).to eq(nil)
     end
     it "You can add a value to the list" do
-      expect(list1.add(1).head).to eq(a)
+      expect(list1.add(1).head).to eq(Node.new(1, nil, nil))
+    end
+    it "You can add multiple elements into the list" do
+      expect(list2.add(3).tail).to eq(c)
     end
   end
 end
