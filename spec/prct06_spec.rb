@@ -40,7 +40,7 @@ RSpec.describe Prct06 do
     list1 = List.new()
     list2 = List.new()
     list2.add(1)
-    list2.add(2)
+    list2.add(2) 
 
     it "It's possible to generate a Node with a value" do
       expect(a.value).to eq(1)

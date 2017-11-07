@@ -40,5 +40,12 @@ class List
     @tail.next = nil
     return toReturn
   end
-
 end
+
+list = List.new()
+list.add(2)
+list.add(6)
+list.add(9)
+puts list.pop
+puts list.shift
+
