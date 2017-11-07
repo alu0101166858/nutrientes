@@ -45,8 +45,11 @@ RSpec.describe Prct06 do
     it "The node has a next" do
       expect(b[:next]).to eq(c)
     end
-    it "Create list" do
+    it "Create list and it has a head" do
       expect(List.new().head).to eq(nil)
+    end
+    it "List has a tail" do
+      expect(List.new().tail).to eq(nil)
     end
   end
 end
