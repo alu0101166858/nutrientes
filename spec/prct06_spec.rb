@@ -35,6 +35,7 @@ RSpec.describe Prct06 do
     a = Node.new(1, nil, nil)
     c = Node.new(3, nil, nil)
     b = Node.new(2, c, a)
+    list1 = List.new()
 
     it "It's possible to generate a Node with a value" do
       expect(a.value).to eq(1)
@@ -51,5 +52,9 @@ RSpec.describe Prct06 do
     it "List has a tail" do
       expect(List.new().tail).to eq(nil)
     end
+    it "You can add a value to the list" do
+      expect(list1.add(1).head).to eq(a)
+    end
+
   end
 end
