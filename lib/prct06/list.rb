@@ -33,4 +33,12 @@ class List
     @head.prev = nil
     return toReturn
   end
+
+  def pop
+    toReturn = @tail
+    @tail = @tail.prev
+    @tail.next = nil
+    return toReturn
+  end
+
 end
