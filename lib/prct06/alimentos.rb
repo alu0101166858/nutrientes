@@ -24,3 +24,28 @@ class Alimentos
     @proteinas * 4 + @glucidos * 4 + @lipidos *9
   end
 end
+
+class HuevosLacteosHelados < Alimentos
+end
+
+class CarnesDerivados < Alimentos
+end
+
+class PescadosMariscos < Alimentos
+end
+
+class AlimentosGrasos < Alimentos
+end
+
+class AlimentosCarbohidratos < Alimentos
+end
+
+class VerdurasHortalizas < Alimentos
+end
+
+class Frutas < Alimentos
+end
+
+class Bebidas < Alimentos
+end
+
