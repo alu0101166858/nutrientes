@@ -3,11 +3,12 @@ Node = Struct.new(:value, :nex, :prev)
 
 class Node
   def to_s
-    to_return = "[Value: #{value}]"
+    to_return = "(Value: #{value})"
   end
 end
 
 class List
+  include Enumerable
   def initialize
     @head = nil
     @tail = nil
@@ -66,6 +67,20 @@ class List
       return "List is empty" 
     end
   end
+
+  def to_array
+    resultArray = []
+    current = @head
+    while current != nil do
+      resultArray << current
+      current = current.nex
+    end
+    return resultArray
+  end
+
+  def each
+    to_array.each    
+  end
 end
 
 #trying things
@@ -73,11 +88,7 @@ list = List.new()
 list.add(2)
 list.add(6)
 list.add(9)
-puts list.shift
-puts list.shift
-puts list.shift
-puts list.shift
-
+list.each{|node| node.value > 2} 
 #node1 = Node.new(14, nil, nil)
 #node2 = Node.new(3, node1, node1)
 #puts node2.to_s 
