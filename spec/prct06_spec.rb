@@ -35,7 +35,7 @@ RSpec.describe Prct06 do
     a = Node.new(1, nil, nil)
     c = Node.new(3, nil, nil)
     b = Node.new(2, c, a)
-    a.next = b
+    a.nex = b
     c.prev = b
     list1 = List.new()
     list2 = List.new()
@@ -49,7 +49,7 @@ RSpec.describe Prct06 do
       expect(b[:prev]).to eq(a)
     end
     it "The node has a next" do
-      expect(b[:next]).to eq(c)
+      expect(b[:nex]).to eq(c)
     end
     it "Create list and it has a head" do
       expect(List.new().head).to eq(nil)
