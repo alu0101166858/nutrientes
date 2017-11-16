@@ -181,7 +181,7 @@ RSpec.describe Prct06 do
   end
 
   context "alimentos comparable" do
-    it "first test" do
+    it "test <=> and between?" do
       a1 = Alimentos.new("Alimento1", 10, 10, 10)
       a2 = Alimentos.new("Alimento2", 1, 1, 1)
 
@@ -189,6 +189,9 @@ RSpec.describe Prct06 do
       expect(a1 > a2).to eq(true)
       expect(a1 == a2).to eq(false)
       expect(a2 == a2).to eq(true)
+      expect(Alimentos.new("Alimento3", 5.3, 6.6, 2.5).between?(a2, a1)).to eq(true)
+      expect(Alimentos.new("Alimento4", 3.6, 6.6, 20.5).between?(a2, a1)).to eq(false)
+
     end
   end
 

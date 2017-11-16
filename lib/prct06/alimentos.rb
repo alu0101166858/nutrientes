@@ -1,4 +1,9 @@
 class Alimentos
+  include Comparable
+  def <=>(anOther)
+    energy <=> anOther.energy
+  end
+
   def initialize(nombre, proteinas, glucidos,  lipidos)
     @nombre = nombre
     @proteinas = proteinas
