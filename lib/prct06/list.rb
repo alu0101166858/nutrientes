@@ -97,7 +97,7 @@ list = List.new()
 list.add(2)
 list.add(6)
 list.add(9)
-puts list.to_array
+#puts list.to_array
 #list.each{|node| node.value > 2}
 #node1 = Node.new(14, nil, nil)
 #node2 = Node.new(3, node1, node1)
