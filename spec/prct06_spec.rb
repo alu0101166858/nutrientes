@@ -186,6 +186,9 @@ RSpec.describe Prct06 do
       a2 = Alimentos.new("Alimento2", 1, 1, 1)
 
       expect(a1 < a2).to eq(false)
+      expect(a1 > a2).to eq(true)
+      expect(a1 == a2).to eq(false)
+      expect(a2 == a2).to eq(true)
     end
   end
 
