@@ -195,11 +195,17 @@ RSpec.describe Prct06 do
   end
  
   context "list enumerable" do
-    it "first test" do
+    it "tests with all?, count, any? and include?" do
      list = List.new()
      list.add(1)
      list.add(2) 
      expect(list.all?).to eq(true)
+     expect(list.count).to eq(2)
+     expect(list.all?{|node| node.value >= 1}).to eq(true)
+     expect(list.any?{|node| node.value >= 2}).to eq(true)
+     expect(list.any?{|node| node.value >= 5}).to eq(false)
+     expect(list.include?(333)).to eq(false)
+     expect(list.include?(1)).to eq(true)
     end
 
   end

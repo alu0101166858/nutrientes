@@ -2,6 +2,14 @@
 Node = Struct.new(:value, :nex, :prev)
 
 class Node
+  include Comparable
+  def <=>(anOther)
+    if anOther.is_a?(Node)
+      value <=> anOther.value
+    else
+      value <=> anOther
+    end
+  end
   def to_s
     to_return = "(Value: #{value})"
   end
@@ -78,17 +86,19 @@ class List
     return resultArray
   end
 
-  def each
-    to_array.each    
+  def each(&block)
+    to_array.each(&block)  
   end
 end
 
 #trying things
+
 list = List.new()
 list.add(2)
 list.add(6)
 list.add(9)
-list.each{|node| node.value > 2} 
+puts list.to_array
+#list.each{|node| node.value > 2}
 #node1 = Node.new(14, nil, nil)
 #node2 = Node.new(3, node1, node1)
 #puts node2.to_s 
