@@ -191,8 +191,17 @@ RSpec.describe Prct06 do
       expect(a2 == a2).to eq(true)
       expect(Alimentos.new("Alimento3", 5.3, 6.6, 2.5).between?(a2, a1)).to eq(true)
       expect(Alimentos.new("Alimento4", 3.6, 6.6, 20.5).between?(a2, a1)).to eq(false)
-
     end
+  end
+ 
+  context "list enumerable" do
+    it "first test" do
+     list = List.new()
+     list.add(1)
+     list.add(2) 
+     expect(list.all?).to eq(true)
+    end
+
   end
 
 end
