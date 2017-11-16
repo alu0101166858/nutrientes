@@ -180,4 +180,13 @@ RSpec.describe Prct06 do
     end
   end
 
+  context "alimentos comparable" do
+    it "first test" do
+      a1 = Alimentos.new("Alimento1", 10, 10, 10)
+      a2 = Alimentos.new("Alimento2", 1, 1, 1)
+
+      expect(a1 < a2).to eq(false)
+    end
+  end
+
 end
