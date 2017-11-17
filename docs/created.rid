@@ -1,0 +1,15 @@
+Thu, 16 Nov 2017 19:38:15 +0000
+./lib/prct06.rb	Thu, 26 Oct 2017 16:18:53 +0100
+./lib/prct06/list.rb	Thu, 16 Nov 2017 19:19:03 +0000
+./lib/prct06/alimentos.rb	Thu, 16 Nov 2017 17:15:38 +0000
+./lib/prct06/version.rb	Thu, 26 Oct 2017 16:18:53 +0100
+./bin/setup	Thu, 26 Oct 2017 16:18:53 +0100
+./bin/console	Thu, 26 Oct 2017 16:18:53 +0100
+./spec/prct06_spec.rb	Thu, 16 Nov 2017 19:17:37 +0000
+./spec/spec_helper.rb	Thu, 26 Oct 2017 16:18:53 +0100
+./Gemfile.lock	Tue, 07 Nov 2017 14:47:59 +0000
+./Gemfile	Tue, 07 Nov 2017 14:46:57 +0000
+./README.md	Thu, 26 Oct 2017 16:18:53 +0100
+./Rakefile	Thu, 26 Oct 2017 16:18:53 +0100
+./Guardfile	Tue, 07 Nov 2017 14:48:49 +0000
+./prct06.gemspec	Tue, 07 Nov 2017 14:46:30 +0000
