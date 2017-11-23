@@ -31,6 +31,11 @@ def aibc_imperativa(g)
   suma
 end
 
-def aibc_funcional
+def ig(aibc_alimento, aibc_glucosa)
+  ig_alimento = (((aibc_alimento[0] /aibc_glucosa[0])*100) + (((aibc_alimento[1] /aibc_glucosa[1]))*100))/2
+end
 
+
+def aibc_funcional(g)
+  g
 end
