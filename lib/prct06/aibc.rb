@@ -35,11 +35,28 @@ def ig(aibc_alimento, aibc_glucosa)
   ig_alimento = (((aibc_alimento[0] /aibc_glucosa[0])*100) + (((aibc_alimento[1] /aibc_glucosa[1]))*100))/2
 end
 
-def aibc_funcional(g)
-  #g.each...
-  #g.collect{|x| (0.0 if x < g[0]) ||(((g[index] - g[0]) + (g[index-1] - g[0]))/2)*5 }
-  #.reduce(:+)
-  g.each_cons(2){|a| (((a[1] - g[0]) + (a[0] - g[0]))/2)*5}.inject{|array, x| array << x}
-(5..10).inject { |sum, n| sum + n }
-  
+#def aibc_funcional_fisttry(g)
+#g.each...
+#  aibc=
+#  g=g.first()
+#  s = g.each_cons(2).to_a
+#  s= s.collect{|a| (((a[1] - g[0]) + (a[0] - g[0]))/2)*5}
+#  y = g.zip(s)
+#  z = y.collect{|v| (0.0 if v[0] < g[0]) ||v[1]}
+#  z = z.find_all{|x| x != nil}
+#  return [z.reduce(:+)]
+#end
+
+
+$concentracionThis = []
+$concentracionGlucosa = []
+def aibc_funcional
+  aibc = lambda {|list| list.drop(1).zip(list.first(list.count - 1)).map {|i| i[0] < list.first ? 0 : (((i[0] - list.first) + (i[1] - list.first))/2) * 5}.reduce(:+)}
+  igIndAll = $concentracionThis.zip($concentracionGlucosa).map{|dataPair| [aibc.call(dataPair[0]), aibc.call(dataPair[1])]}.map{|aibcPair| (aibcPair[0] / aibcPair[1]) * 100}
+  igIndAll.reduce(:+)/igIndAll.count
+end
+
+def addMeasurement(alimento, glucosa)
+  $concentracionThis << alimento
+  $concentracionGlucosa << glucosa
 end
