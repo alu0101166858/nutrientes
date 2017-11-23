@@ -1,4 +1,4 @@
-def aibc_imperativa
+def aibc_imperativa(g)
   i = 0
   r = []
   while i < g.size

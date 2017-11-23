@@ -1,6 +1,7 @@
 require "spec_helper"
 require "/home/usuario/LPP/prct06/lib/prct06/alimentos.rb"
 require "/home/usuario/LPP/prct06/lib/prct06/list.rb"
+require "/home/usuario/LPP/prct06/lib/prct06/aibc.rb"
 
 RSpec.describe Prct06 do
   context "Practica06" do
@@ -207,7 +208,15 @@ RSpec.describe Prct06 do
      expect(list.include?(333)).to eq(false)
      expect(list.include?(1)).to eq(true)
     end
+  end
 
+  context "Practica08" do
+    it "imperative code works" do
+      g1=[6.7, 6.5, 6.8, 6.9, 7.0, 7.1, 6.9, 6.9, 6.9, 6.7, 6.9, 7.3, 7.0, 7.0, 7.2, 7.1, 6.8, 7.2, 7.3, 7.0, 6.8, 6.7, 6.8, 6.7, 6.9]
+      g2=[4.9, 5.3, 5.9, 6.7, 7.2, 7.6, 8.0, 8.2, 8.2, 8.4, 8.3, 8.3, 8.0, 7.5, 7.1, 6.8, 6.8, 6.9, 6.8, 6.3, 6.2, 6.3, 6.2, 6.3, 6.1]
+      g=[g1,g2]
+      expect(aibc_imperativa(g)).to eq([27.999999999999993, 255.99999999999997])
+    end
   end
 
 end
