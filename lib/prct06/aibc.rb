@@ -35,7 +35,11 @@ def ig(aibc_alimento, aibc_glucosa)
   ig_alimento = (((aibc_alimento[0] /aibc_glucosa[0])*100) + (((aibc_alimento[1] /aibc_glucosa[1]))*100))/2
 end
 
-
 def aibc_funcional(g)
-  g
+  #g.each...
+  #g.collect{|x| (0.0 if x < g[0]) ||(((g[index] - g[0]) + (g[index-1] - g[0]))/2)*5 }
+  #.reduce(:+)
+  g.each_cons(2){|a| (((a[1] - g[0]) + (a[0] - g[0]))/2)*5}.inject{|array, x| array << x}
+(5..10).inject { |sum, n| sum + n }
+  
 end

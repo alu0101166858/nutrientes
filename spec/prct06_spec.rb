@@ -226,7 +226,7 @@ RSpec.describe Prct06 do
     end
     it "aibc_funcional" do
       manzana1=[6.7, 6.5, 6.8, 6.9, 7.0, 7.1, 6.9, 6.9, 6.9, 6.7, 6.9, 7.3, 7.0, 7.0, 7.2, 7.1, 6.8, 7.2, 7.3, 7.0, 6.8, 6.7, 6.8, 6.7, 6.9]
-      expect(aibc_funcional([manzana1])).to eq(aibc_imperativa([manzana1]))
+      expect(aibc_funcional(manzana1)).to eq(aibc_imperativa([manzana1]))
     end
   end
 
