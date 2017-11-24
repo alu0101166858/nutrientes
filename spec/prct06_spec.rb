@@ -231,8 +231,8 @@ RSpec.describe Prct06 do
       glucosa2=[6.3, 5.4, 5.6, 5.7, 6.5, 7.4, 7.9, 7.4, 7.7, 7.9, 7.9, 7.8, 7.8, 7.8, 8.0, 8.5, 9.4, 10.8, 10.5, 9.1, 8.9, 8.3, 7.7, 7.6, 7.5]
       manzana=[manzana1, manzana2]
       glucosa=[glucosa1, glucosa2]
-      addMeasurement(manzana1, glucosa1)
-      addMeasurement(manzana2, glucosa2)
+      measure(manzana1, glucosa1)
+      measure(manzana2, glucosa2)
       expect(aibc_funcional).to eq(ig(aibc_imperativa(manzana), aibc_imperativa(glucosa)))
     end
   end

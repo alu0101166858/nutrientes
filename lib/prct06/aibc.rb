@@ -56,7 +56,7 @@ def aibc_funcional
   igIndAll.reduce(:+)/igIndAll.count
 end
 
-def addMeasurement(alimento, glucosa)
+def measure(alimento, glucosa)
   $concentracionThis << alimento
   $concentracionGlucosa << glucosa
 end
