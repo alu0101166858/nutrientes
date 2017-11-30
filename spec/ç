@@ -238,7 +238,7 @@ RSpec.describe Prct06 do
   end
 
   context "Practica10" do
-    before(:all) do
+    before(:each) do
       @tabla = [
         HuevosLacteosHelados.new("Huevo frito", 14.1, 0.0, 19.5),
         HuevosLacteosHelados.new("Leche vaca", 3.3, 4.8, 3.2),
@@ -265,7 +265,8 @@ RSpec.describe Prct06 do
         ]
 
     end
-    it "sort with for" do
+    it "test" do
+      expect(@tabla[a].class).to eq(Alimento)
     end
   end
 end
