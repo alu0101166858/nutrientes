@@ -1,0 +1,13 @@
+current directory: /home/siga01.stic.ull.es/0f/alu0101166858/Documentos/nutrientes/vendor/bundle/ruby/2.3.0/gems/json-2.1.0/ext/json
+/usr/bin/ruby2.3 -r ./siteconf20171130-16257-1npubi.rb extconf.rb
+creating Makefile
+
+current directory: /home/siga01.stic.ull.es/0f/alu0101166858/Documentos/nutrientes/vendor/bundle/ruby/2.3.0/gems/json-2.1.0/ext/json
+make "DESTDIR=" clean
+
+current directory: /home/siga01.stic.ull.es/0f/alu0101166858/Documentos/nutrientes/vendor/bundle/ruby/2.3.0/gems/json-2.1.0/ext/json
+make "DESTDIR="
+make: No se hace nada para 'all'.
+
+current directory: /home/siga01.stic.ull.es/0f/alu0101166858/Documentos/nutrientes/vendor/bundle/ruby/2.3.0/gems/json-2.1.0/ext/json
+make "DESTDIR=" install
