@@ -26,7 +26,5 @@ def sort_each(input)
 end
 
 def sort_sort(input)
-  c = input.dup
-  c = c.sort
-  return c
+  input.sort
 end

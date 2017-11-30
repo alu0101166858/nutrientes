@@ -4,6 +4,7 @@ require "/home/usuario/LPP/prct06/lib/prct06/list.rb"
 require "/home/usuario/LPP/prct06/lib/prct06/aibc.rb"
 require "/home/usuario/LPP/prct06/lib/prct06/sort.rb"
 require 'benchmark'
+include Benchmark
 
 RSpec.describe Prct06 do
   context "Practica06" do
@@ -280,11 +281,11 @@ RSpec.describe Prct06 do
 	expect(sort_sort(@tabla)).to eq(@tabla.sort)
     end
     it "benchmark" do
-	Benchmark.bm do |x|
-	x.report("for:")   {sort_for(@tabla)}
-	x.report("each:") {sort_each(@tabla)}
-	x.report("sort:")  {sort_sort(@tabla)}
+	Benchmark.benchmark(CAPTION, 7, FORMAT) do |x|
+		tf = x.report("for:")   {sort_for(@tabla)}
+		tt = x.report("each:") {sort_each(@tabla)}
+		tu = x.report("sort:")  {sort_sort(@tabla)}
+	end
     end
-end
   end
 end
