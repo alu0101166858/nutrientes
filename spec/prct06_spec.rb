@@ -1,8 +1,8 @@
 require "spec_helper"
-require "/home/usuario/LPP/prct06/lib/prct06/alimentos.rb"
-require "/home/usuario/LPP/prct06/lib/prct06/list.rb"
-require "/home/usuario/LPP/prct06/lib/prct06/aibc.rb"
-require "/home/usuario/LPP/prct06/lib/prct06/sort.rb"
+require "../lib/prct06/alimentos.rb"
+require "../lib/prct06/list.rb"
+require "../lib/prct06/aibc.rb"
+require "../lib/prct06/sort.rb"
 require 'benchmark'
 include Benchmark
 
