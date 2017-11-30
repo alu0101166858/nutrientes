@@ -26,7 +26,10 @@ class Alimentos
     "(Alimento: #{@nombre}, proteinas: #{@proteinas}, glucidos: #{@glucidos}, lipidos: #{@lipidos})"
   end
   def energy
-    @proteinas * 4 + @glucidos * 4 + @lipidos *9
+    @energy = (@proteinas * 4 + @glucidos * 4 + @lipidos *9).round(1)
+  end
+  def to_s
+    "#{@nombre}(#{@energy})"
   end
 end
 

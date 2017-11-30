@@ -2,6 +2,8 @@ require "spec_helper"
 require "/home/usuario/LPP/prct06/lib/prct06/alimentos.rb"
 require "/home/usuario/LPP/prct06/lib/prct06/list.rb"
 require "/home/usuario/LPP/prct06/lib/prct06/aibc.rb"
+require "/home/usuario/LPP/prct06/lib/prct06/sort.rb"
+require 'benchmark'
 
 RSpec.describe Prct06 do
   context "Practica06" do
@@ -265,7 +267,24 @@ RSpec.describe Prct06 do
         ]
 
     end
+
     it "sort with for" do
+	expect(sort_for(@tabla)).to eq(@tabla.sort)
     end
+
+    it "sort with each" do
+	expect(sort_each(@tabla)).to eq(@tabla.sort)
+    end
+
+    it "sort with sort" do
+	expect(sort_sort(@tabla)).to eq(@tabla.sort)
+    end
+    it "benchmark" do
+	Benchmark.bm do |x|
+	x.report("for:")   {sort_for(@tabla)}
+	x.report("each:") {sort_each(@tabla)}
+	x.report("sort:")  {sort_sort(@tabla)}
+    end
+end
   end
 end
